@@ -37,6 +37,11 @@ No client file is modified.
 Tested on clients with Qt 5.15 (32-bit), 6.8 and 6.9. The address search also recognizes Qt 6.5,
 6.10 and 6.11, but was not tested on a running client.
 
+## Disclaimer
+
+Use at your own risk. I take no responsibility for anything that happens from using this program:
+bans, crashes, lost items, broken clients or anything else.
+
 Writing to the client's memory may be flagged by a server's anticheat. "Launch unlimited" does not
 touch memory.
 
