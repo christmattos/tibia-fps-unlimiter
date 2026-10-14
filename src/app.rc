@@ -1,0 +1,27 @@
+#pragma code_page(65001)
+#include <windows.h>
+#include <commctrl.h>
+#include "resource.h"
+
+1 RT_MANIFEST "app.manifest"
+
+IDD_MAIN DIALOGEX 0, 0, 300, 206
+STYLE DS_SHELLFONT | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
+CAPTION "Tibia FPS Unlimiter"
+FONT 9, "Segoe UI", 400, 0, 0x1
+BEGIN
+    LTEXT           "Open clients", -1, 7, 7, 120, 9
+    CONTROL         "", IDC_LIST, "SysListView32", LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP, 7, 17, 286, 95
+    PUSHBUTTON      "Re&fresh", IDC_REFRESH, 7, 116, 50, 14
+    DEFPUSHBUTTON   "&Remove limit", IDC_UNLIMIT, 218, 116, 75, 14
+    LTEXT           "Launch a new client", -1, 7, 142, 120, 9
+    EDITTEXT        IDC_PATH, 7, 152, 226, 14, ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...", IDC_BROWSE, 238, 152, 55, 14
+    PUSHBUTTON      "&Launch unlimited", IDC_LAUNCH, 218, 172, 75, 14
+    CONTROL         "", IDC_STATUS, "msctls_statusbar32", WS_CHILD | WS_VISIBLE, 0, 0, 0, 0
+END
+
+IDR_ACCEL ACCELERATORS
+BEGIN
+    VK_F5, IDC_REFRESH, VIRTKEY
+END
